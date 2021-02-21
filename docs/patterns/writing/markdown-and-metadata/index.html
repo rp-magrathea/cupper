@@ -170,6 +170,24 @@
                       </li>
                     
                       <li class="pattern">
+                        <a href="https://thepaciellogroup.github.io/cupper/patterns/writing/" >
+                          <svg class="bookmark-icon" aria-hidden="true" focusable="false" viewBox="0 0 40 50">
+                            <use xlink:href="#bookmark"></use>
+                          </svg>
+                          <span class="text">Writing</span>
+                        </a>
+                      </li>
+                    
+                      <li class="pattern">
+                        <a href="https://thepaciellogroup.github.io/cupper/patterns/media/" >
+                          <svg class="bookmark-icon" aria-hidden="true" focusable="false" viewBox="0 0 40 50">
+                            <use xlink:href="#bookmark"></use>
+                          </svg>
+                          <span class="text">Media</span>
+                        </a>
+                      </li>
+                    
+                      <li class="pattern">
                         <a href="https://thepaciellogroup.github.io/cupper/patterns/setup/" >
                           <svg class="bookmark-icon" aria-hidden="true" focusable="false" viewBox="0 0 40 50">
                             <use xlink:href="#bookmark"></use>
@@ -202,6 +220,15 @@
                             <use xlink:href="#bookmark"></use>
                           </svg>
                           <span class="text">Updating Cupper</span>
+                        </a>
+                      </li>
+                    
+                      <li class="pattern">
+                        <a href="https://thepaciellogroup.github.io/cupper/patterns/coding/" >
+                          <svg class="bookmark-icon" aria-hidden="true" focusable="false" viewBox="0 0 40 50">
+                            <use xlink:href="#bookmark"></use>
+                          </svg>
+                          <span class="text">Coding</span>
                         </a>
                       </li>
                     
@@ -414,65 +441,33 @@
 
 
     
-    
-
-<p>In <strong>Cupper</strong> everything is documented using markdown, as a &ldquo;pattern&rdquo;. To create a new pattern file, just add a file with the <code>.md</code> extension to the <code>content/patterns</code> folder. It&rsquo;s recommended you use &ldquo;kebab case&rdquo; to name the file (words separated by hyphens). For example, a pattern with the title &ldquo;Menu button&rdquo; should probably have the filename <code>menu-button</code>. Then you get a nice clean URL: <code>username.github.io/your-library/patterns/menu-button</code>.</p>
-
+    <p>In <strong>Cupper</strong> everything is documented using markdown, as a &ldquo;pattern&rdquo;. To create a new pattern file, just add a file with the <code>.md</code> extension to the <code>content/patterns</code> folder. It&rsquo;s recommended you use &ldquo;kebab case&rdquo; to name the file (words separated by hyphens). For example, a pattern with the title &ldquo;Menu button&rdquo; should probably have the filename <code>menu-button</code>. Then you get a nice clean URL: <code>username.github.io/your-library/patterns/menu-button</code>.</p>
 <p>If you&rsquo;re not familiar with writing markdown, there are a number of tutorials available. One of the best is <a href="https://guides.github.com/features/mastering-markdown/">Mastering Markdown</a> offered by Github. There&rsquo;s also a <a href="https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet">nice cheatsheet here</a>.</p>
-
 <h2 id="the-metadata">The metadata</h2>
-
 <p>Like many static site generators, Hugo lets you add metadata to its markdown files. Hugo&rsquo;s brand of metadata is called TOML (although YAML is also accepted). The only thing you <em>have</em> to put in the TOML is a <code>title</code> — like this:</p>
-
 <pre><code>+++
 title = &quot;Menu button&quot;
 +++
-</code></pre>
-
-<aside aria-label="note" class="note">
-  <div>
-    <svg class="sign" aria-hidden="true" viewBox="0 0 41.667306 41.66729" focusable="false">
-      <use xlink:href="#info"></use>
-    </svg>
-    <p>The title automatically becomes the page&rsquo;s main <code>&lt;h1&gt;</code> heading. The highest heading level you should use in the body of your markdown file is therefore <code>&lt;h2&gt;</code>.</p>
-
-  </div>
-</aside>
-
-
+</code></pre><!-- raw HTML omitted -->
+<p>The title automatically becomes the page&rsquo;s main <code>&lt;h1&gt;</code> heading. The highest heading level you should use in the body of your markdown file is therefore <code>&lt;h2&gt;</code>.</p>
+<!-- raw HTML omitted -->
 <h3 id="tags">Tags</h3>
-
 <p>If you like, you can also tag the pattern so that it turns up in lists of similar content. You add tags in an array format. Note that all the TOML data is found at the top of the markdown file, between the <code>+++</code> lines.</p>
-
 <pre><code>+++
 title = &quot;Menu button&quot;
 tags = [&quot;interactive&quot;, &quot;popup&quot;, &quot;javascript&quot;]
 +++
-</code></pre>
-
-<p>This will create links to pages listing content tagged with the same terms using the URL schema <code>/tag/[tag name]</code>. Some example tags links are provided for this page, which you can see listed under the main heading.</p>
-
+</code></pre><p>This will create links to pages listing content tagged with the same terms using the URL schema <code>/tag/[tag name]</code>. Some example tags links are provided for this page, which you can see listed under the main heading.</p>
 <h3 id="weight">Weight</h3>
-
 <p>By default, patterns are listed alphabetically in the navigation. However, sometimes you might like to change the order around. This is possible by adding a <code>weight</code> parameter. To make my menu button pattern appear at the top of its subsection, I would give it a <code>weight</code> of <code>1</code>:</p>
-
 <pre><code>+++
 title = &quot;Menu button&quot;
 tags = [&quot;interactive&quot;, &quot;popup&quot;, &quot;javascript&quot;]
 weight = 1
 +++
-</code></pre>
-
-<aside aria-label="warning" class="note warning">
-  <div>
-    <svg class="sign" aria-hidden="true" viewBox="0 0 48.430474 41.646302" focusable="false">
-      <use xlink:href="#warning"></use>
-    </svg>
-    <p>The <code>weight</code> parameter should be an integer, not a string, so don&rsquo;t use scare quotes around the value!</p>
-
-  </div>
-</aside>
-
+</code></pre><!-- raw HTML omitted -->
+<p>The <code>weight</code> parameter should be an integer, not a string, so don&rsquo;t use scare quotes around the value!</p>
+<!-- raw HTML omitted -->
 
   </main>
 

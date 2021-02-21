@@ -170,6 +170,24 @@
                       </li>
                     
                       <li class="pattern">
+                        <a href="https://thepaciellogroup.github.io/cupper/patterns/writing/" >
+                          <svg class="bookmark-icon" aria-hidden="true" focusable="false" viewBox="0 0 40 50">
+                            <use xlink:href="#bookmark"></use>
+                          </svg>
+                          <span class="text">Writing</span>
+                        </a>
+                      </li>
+                    
+                      <li class="pattern">
+                        <a href="https://thepaciellogroup.github.io/cupper/patterns/media/" >
+                          <svg class="bookmark-icon" aria-hidden="true" focusable="false" viewBox="0 0 40 50">
+                            <use xlink:href="#bookmark"></use>
+                          </svg>
+                          <span class="text">Media</span>
+                        </a>
+                      </li>
+                    
+                      <li class="pattern">
                         <a href="https://thepaciellogroup.github.io/cupper/patterns/setup/" >
                           <svg class="bookmark-icon" aria-hidden="true" focusable="false" viewBox="0 0 40 50">
                             <use xlink:href="#bookmark"></use>
@@ -202,6 +220,15 @@
                             <use xlink:href="#bookmark"></use>
                           </svg>
                           <span class="text">Updating Cupper</span>
+                        </a>
+                      </li>
+                    
+                      <li class="pattern">
+                        <a href="https://thepaciellogroup.github.io/cupper/patterns/coding/" >
+                          <svg class="bookmark-icon" aria-hidden="true" focusable="false" viewBox="0 0 40 50">
+                            <use xlink:href="#bookmark"></use>
+                          </svg>
+                          <span class="text">Coding</span>
                         </a>
                       </li>
                     
@@ -394,82 +421,63 @@
 
     
     <p>When you&rsquo;re an inclusive designer, it&rsquo;s pertinent to do some testing. Following specs is one thing, but you need to verify that your component works okay for users.</p>
-
 <p><strong>Cupper</strong> provided a <code>tested</code> shortcode that lets you show which browsers and assistive technologies you&rsquo;ve tried your design out in. Here&rsquo;s an example. Note the commas and &ldquo;+&rdquo; signs.</p>
-
 <pre class=""><code  data-codeblock-shortcode>
 &#x7b;{% tested using="Firefox + JAWS, Chrome, Safari iOS + Voiceover, Edge" %}}
 </code></pre>
 
-
 <p>This outputs:</p>
-
-
-
-
-<table class="tested">
-  <tr>
-    <th scope="row">
-      <svg viewBox="0 0 177.16535 177.16535" focusable="false" aria-hidden="true">
-        <use xlink:href="#tick"></use>
-      </svg>
-      Tested using
-    </th>
+<!-- raw HTML omitted -->
+<pre><code>  &lt;td&gt;
     
-      <td>
-        
-        
-        
-        
-        <img src="https://thepaciellogroup.github.io/cupper/images/browser-firefox.svg" alt="">
-        <span><strong>Firefox </strong></span>
-        
-          
-          
-          <span class="additional">with <strong>JAWS</strong></span>
-        
-      </td>
     
-      <td>
-        
-        
-        
-        
-        <img src="https://thepaciellogroup.github.io/cupper/images/browser-chrome.svg" alt="">
-        <span><strong>Chrome </strong></span>
-        
-      </td>
     
-      <td>
-        
-        
-        
-        
-        <img src="https://thepaciellogroup.github.io/cupper/images/browser-safari-ios.svg" alt="">
-        <span><strong>Safari iOS </strong></span>
-        
-          
-          
-          <span class="additional">with <strong>Voiceover</strong></span>
-        
-      </td>
     
-      <td>
-        
-        
-        
-        
-        <img src="https://thepaciellogroup.github.io/cupper/images/browser-edge.svg" alt="">
-        <span><strong>Edge </strong></span>
-        
-      </td>
+    &lt;img src=&quot;https://thepaciellogroup.github.io/cupper/images/browser-firefox.svg&quot; alt=&quot;&quot;&gt;
+    &lt;span&gt;&lt;strong&gt;Firefox &lt;/strong&gt;&lt;/span&gt;
     
-  </tr>
-</table>
+      
+      
+      &lt;span class=&quot;additional&quot;&gt;with &lt;strong&gt;JAWS&lt;/strong&gt;&lt;/span&gt;
+    
+  &lt;/td&gt;
 
+  &lt;td&gt;
+    
+    
+    
+    
+    &lt;img src=&quot;https://thepaciellogroup.github.io/cupper/images/browser-chrome.svg&quot; alt=&quot;&quot;&gt;
+    &lt;span&gt;&lt;strong&gt;Chrome &lt;/strong&gt;&lt;/span&gt;
+    
+  &lt;/td&gt;
 
+  &lt;td&gt;
+    
+    
+    
+    
+    &lt;img src=&quot;https://thepaciellogroup.github.io/cupper/images/browser-safari-ios.svg&quot; alt=&quot;&quot;&gt;
+    &lt;span&gt;&lt;strong&gt;Safari iOS &lt;/strong&gt;&lt;/span&gt;
+    
+      
+      
+      &lt;span class=&quot;additional&quot;&gt;with &lt;strong&gt;Voiceover&lt;/strong&gt;&lt;/span&gt;
+    
+  &lt;/td&gt;
+
+  &lt;td&gt;
+    
+    
+    
+    
+    &lt;img src=&quot;https://thepaciellogroup.github.io/cupper/images/browser-edge.svg&quot; alt=&quot;&quot;&gt;
+    &lt;span&gt;&lt;strong&gt;Edge &lt;/strong&gt;&lt;/span&gt;
+    
+  &lt;/td&gt;
+</code></pre>
+<!-- raw HTML omitted -->
 <p>The value for the <code>using</code> attribute follows a specific format: each testing setup is separated by a comma (with a space if you like, but it&rsquo;s not mandatory). If you want to add an assistive technology (or any other &ldquo;add on&rdquo;) this needs to follow a &ldquo;+&rdquo;. This additional part can be anything, like &ldquo;A VR headset I borrowed&rdquo;, but there are only a few browser terms available. These are case sensitive, so you need to write them as below:</p>
-
 <ul>
 <li>Firefox</li>
 <li>Chrome</li>
@@ -481,7 +489,6 @@
 <li>Firefox Android</li>
 <li>Safari iOS</li>
 </ul>
-
 <p>Obviously, this is not a comprehensive list and more may be added over time. But it covers most of the main browsers for pairing with other software — at least for testing purposes.</p>
 
   </main>

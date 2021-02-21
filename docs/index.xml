@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>The Cupper Documentation Builder on Cupper</title>
@@ -6,11 +6,7 @@
     <description>Recent content in The Cupper Documentation Builder on Cupper</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 26 Jun 2017 18:27:58 +0100</lastBuildDate>
-    
-	<atom:link href="https://thepaciellogroup.github.io/cupper/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Mon, 26 Jun 2017 18:27:58 +0100</lastBuildDate><atom:link href="https://thepaciellogroup.github.io/cupper/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Code blocks</title>
       <link>https://thepaciellogroup.github.io/cupper/patterns/coding/code-blocks/</link>
@@ -18,9 +14,9 @@
       
       <guid>https://thepaciellogroup.github.io/cupper/patterns/coding/code-blocks/</guid>
       <description>Markdown already supports code samples both inline (using single backticks like `some code here`) and in blocks. Cupper will syntax highlight HTML, CSS, and JavaScript if you provide the correct language in the formulation of the block.
-So, this&amp;hellip;
-```html &amp;lt;button aria-pressed=&#34;false&#34;toggle me&amp;lt;/button ```  &amp;hellip; will result in this:
-&amp;lt;button aria-pressed=&amp;quot;false&amp;quot;&amp;gt;toggle me&amp;lt;/button&amp;gt;  Note that the syntax highlighting uses a greyscale theme. Cupper is careful not to use color as part of its own design, because these colors may clash with those of the design being illustrated and discussed.</description>
+So, this…
+```html &amp;lt;button aria-pressed=&#34;false&#34;toggle me&amp;lt;/button ```  … will result in this:
+&amp;lt;button aria-pressed=&amp;#34;false&amp;#34;&amp;gt;toggle me&amp;lt;/button&amp;gt; Note that the syntax highlighting uses a greyscale theme. Cupper is careful not to use color as part of its own design, because these colors may clash with those of the design being illustrated and discussed.</description>
     </item>
     
     <item>
@@ -42,7 +38,7 @@ brew install hugo Alternatively, you can manually install Hugo from a package. Y
       
       <guid>https://thepaciellogroup.github.io/cupper/patterns/writing/project-structure/</guid>
       <description>Before you can set about making documentation, you need to know where everything goes. The simplest folder structure looks like this:
- content  _index.md print-version.md patterns  name-of-my-pattern.md name-of-my-other-pattern.md      /content - This is where all of your content lives. You won&amp;rsquo;t need to visit any other folders very frequently. _index.md — This is the content file for your home page. print-version.md — This is a placeholder for the single-page / print-friendly version of you library.</description>
+ content  _index.md print-version.md patterns  name-of-my-pattern.md name-of-my-other-pattern.md       /content - This is where all of your content lives. You won&amp;rsquo;t need to visit any other folders very frequently. _index.md — This is the content file for your home page. print-version.md — This is a placeholder for the single-page / print-friendly version of you library.</description>
     </item>
     
     <item>
@@ -62,7 +58,7 @@ CodePen Cupper offers a couple of ways to do this. The first is by embedding Cod
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://thepaciellogroup.github.io/cupper/patterns/setup/</guid>
-      <description>By now, you should have followed the  Installation instructions. You should have Hugo and Node installed, and a local copy of a forked version of Cupper. You should also have run npm install in the root of that codebase.
+      <description>By now, you should have followed the Installationinstructions. You should have Hugo and Node installed, and a local copy of a forked version of Cupper. You should also have run npm install in the root of that codebase.
 &amp;ldquo;Cleaning&amp;rdquo; the content folder Before you can start writing documentation, there are a few things still to do in order to get set up. At the moment, your version of Cupper is a facsimile of the original, containing all the content you&amp;rsquo;re reading right now.</description>
     </item>
     
@@ -93,7 +89,7 @@ Publishing on Github Pages Cupper creates a /docs folder containing the latest v
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://thepaciellogroup.github.io/cupper/patterns/coding/writing-inline-demos/</guid>
-      <description>There are some issues with  Demo embedding, like the embeds not working offline. They also come with their own branding, which will clash with the pattern you&amp;rsquo;re trying to illustrate.
+      <description>There are some issues with Demo embedding, like the embeds not working offline. They also come with their own branding, which will clash with the pattern you&amp;rsquo;re trying to illustrate.
 Cupper offers another option: a special demo shortcode that allows you to write HTML, CSS, and JavaScript directly into the markdown file. The outputted demo is encapsulated using Shadow DOM, so you don&amp;rsquo;t have to worry about broken styles and global JS.</description>
     </item>
     
@@ -103,9 +99,8 @@ Cupper offers another option: a special demo shortcode that allows you to write 
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://thepaciellogroup.github.io/cupper/patterns/printing/</guid>
-      <description>Cupper&amp;rsquo;s output site includes a one-page  Print version of the generated library, available at /print-version. So, if your library base URL is https://yourName.github.io/your-library, you can print the whole library — to PDF if wanted — from the following address:
-https://yourName.github.io/your-library/print-version     Print styles are also provided for individual pattern pages so, if you wanted to print off a single pattern document, you can!
-  </description>
+      <description>Cupper&amp;rsquo;s output site includes a one-page Print versionof the generated library, available at /print-version. So, if your library base URL is https://yourName.github.io/your-library, you can print the whole library — to PDF if wanted — from the following address:
+https://yourName.github.io/your-library/print-version Print styles are also provided for individual pattern pages so, if you wanted to print off a single pattern document, you can!</description>
     </item>
     
     <item>
@@ -158,8 +153,7 @@ The expandable shortcode takes three parameters:
       <description>Your pattern documentation may need to include commands for installing packages or using CLIs. Cupper offers the cmd shortcode for making code blocks look like terminal commands.
 Here&amp;rsquo;s how you write it:
 &amp;#x7b;{&amp;lt;cmd}} npm run start &amp;#x7b;{&amp;lt;/cmd}}  And here&amp;rsquo;s how it looks:
-npm run start    The cmd shortcode currently only supports single commands. If you want to show multiple, successive commands use separate cmd blocks.
-  </description>
+npm run start The cmd shortcode currently only supports single commands. If you want to show multiple, successive commands use separate cmd blocks.</description>
     </item>
     
     <item>
@@ -180,7 +174,7 @@ The file tree is described using a markdown nested list structure:
       
       <guid>https://thepaciellogroup.github.io/cupper/patterns/media/including-images/</guid>
       <description>From time to time, you&amp;rsquo;ll be wanting to include images illustrating the documented pattern in hand. Images live in the static folder, which is a sibling of the /content folder you&amp;rsquo;ll be mostly working in.
- content static  images  logo.png menu-button.gif        When you first make a copy of Cupper, Cupper&amp;rsquo;s own logo will be included. You should replace this with your own company or project logo.</description>
+ content static  images  logo.png menu-button.gif      When you first make a copy of Cupper, Cupper&amp;rsquo;s own logo will be included. You should replace this with your own company or project logo.</description>
     </item>
     
     <item>
@@ -209,7 +203,7 @@ Notes You may wish to pick out some content in your pattern&amp;rsquo;s document
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://thepaciellogroup.github.io/cupper/patterns/writing/references/</guid>
-      <description>Cross-references Cupper identifies the main content files in your documentation as patterns, and they&amp;rsquo;re kept in the content/ patterns folder. It&amp;rsquo;s easy to cross-reference patterns using the pattern shortcode. For example, I can reference the  Notes &amp;amp; warnings pattern. Here&amp;rsquo;s what the markdown looks like, including the shortcode:
+      <description>Cross-references Cupper identifies the main content files in your documentation as patterns, and they&amp;rsquo;re kept in the content/ patterns folder. It&amp;rsquo;s easy to cross-reference patterns using the pattern shortcode. For example, I can reference the Notes &amp;amp; warningspattern. Here&amp;rsquo;s what the markdown looks like, including the shortcode:
 I can reference the &amp;#x7b;{% pattern &#34;Notes &amp; warnings&#34; %}} pattern here.  This saves you having to worry about pathing and decorates the generated link with a bookmark icon, identifying the link as a pattern reference visually.</description>
     </item>
     
@@ -229,8 +223,8 @@ The example visually-hidden.md snippet describes the CSS needed to create conten
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://thepaciellogroup.github.io/cupper/patterns/writing/tables-of-contents/</guid>
-      <description>Pattern pages in Cupper that have two or more subheadings (&amp;lt;h2&amp;gt;s) automatically get a table of contents: a list of links to the main subsections for the page. This feature is made accessible as a navigation region with the &amp;ldquo;Table of contents&amp;rdquo; label and uses an ordered list. The table of contents markup for the  Setup page looks something like this:
-&amp;lt;nav class=&amp;quot;toc&amp;quot; aria-labelledby=&amp;quot;toc-heading&amp;quot;&amp;gt; &amp;lt;h2 id=&amp;quot;toc-heading&amp;quot;&amp;gt;Table of contents&amp;lt;/h2&amp;gt; &amp;lt;ol&amp;gt; &amp;lt;li&amp;gt; &amp;lt;a href=&amp;quot;#cleaning-the-content-folder&amp;quot;&amp;gt;“Cleaning” the content folder&amp;lt;/a&amp;gt; &amp;lt;/li&amp;gt; &amp;lt;li&amp;gt; &amp;lt;a href=&amp;quot;#the-setup-command&amp;quot;&amp;gt;The setup command&amp;lt;/a&amp;gt; &amp;lt;/li&amp;gt; &amp;lt;li&amp;gt; &amp;lt;a href=&amp;quot;#the-config-file&amp;quot;&amp;gt;The config file&amp;lt;/a&amp;gt; &amp;lt;/li&amp;gt; &amp;lt;li&amp;gt; &amp;lt;a href=&amp;quot;#including-a-logo&amp;quot;&amp;gt;Including a logo&amp;lt;/a&amp;gt; &amp;lt;/li&amp;gt; &amp;lt;/ol&amp;gt; &amp;lt;/nav&amp;gt;  Tables of content are a neat way to break down the content of the page and give users a navigable overview.</description>
+      <description>Pattern pages in Cupper that have two or more subheadings (&amp;lt;h2&amp;gt;s) automatically get a table of contents: a list of links to the main subsections for the page. This feature is made accessible as a navigation region with the &amp;ldquo;Table of contents&amp;rdquo; label and uses an ordered list. The table of contents markup for the Setuppage looks something like this:
+&amp;lt;nav class=&amp;#34;toc&amp;#34; aria-labelledby=&amp;#34;toc-heading&amp;#34;&amp;gt; &amp;lt;h2 id=&amp;#34;toc-heading&amp;#34;&amp;gt;Table of contents&amp;lt;/h2&amp;gt; &amp;lt;ol&amp;gt; &amp;lt;li&amp;gt; &amp;lt;a href=&amp;#34;#cleaning-the-content-folder&amp;#34;&amp;gt;“Cleaning” the content folder&amp;lt;/a&amp;gt; &amp;lt;/li&amp;gt; &amp;lt;li&amp;gt; &amp;lt;a href=&amp;#34;#the-setup-command&amp;#34;&amp;gt;The setup command&amp;lt;/a&amp;gt; &amp;lt;/li&amp;gt; &amp;lt;li&amp;gt; &amp;lt;a href=&amp;#34;#the-config-file&amp;#34;&amp;gt;The config file&amp;lt;/a&amp;gt; &amp;lt;/li&amp;gt; &amp;lt;li&amp;gt; &amp;lt;a href=&amp;#34;#including-a-logo&amp;#34;&amp;gt;Including a logo&amp;lt;/a&amp;gt; &amp;lt;/li&amp;gt; &amp;lt;/ol&amp;gt; &amp;lt;/nav&amp;gt; Tables of content are a neat way to break down the content of the page and give users a navigable overview.</description>
     </item>
     
     <item>
