@@ -1,4 +1,4 @@
-+++
-title = "Writing"
-weight = 1
-+++
+---
+title: Writing
+weight: 1
+---

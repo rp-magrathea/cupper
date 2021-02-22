@@ -1,7 +1,7 @@
-+++
-title = "Writing inline demos"
-weight = 3
-+++
+---
+title: Writing inline demos
+weight: 3
+---
 
 There are some issues with {{% pattern "Demo embedding" %}}, like the embeds not working offline. They also come with their own branding, which will clash with the pattern you're trying to illustrate.
 

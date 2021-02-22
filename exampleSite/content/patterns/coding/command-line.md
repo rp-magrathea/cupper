@@ -1,6 +1,6 @@
-+++
-title = "Command line"
-+++
+---
+title: Command line
+---
 
 Your pattern documentation may need to include commands for installing packages or using <abbr title="command line interface">CLI</abbr>s. **Cupper** offers the `cmd` shortcode for making code blocks look like terminal commands.
 

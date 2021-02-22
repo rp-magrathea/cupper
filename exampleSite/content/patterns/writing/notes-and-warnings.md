@@ -1,6 +1,6 @@
-+++
-title = "Notes & warnings"
-+++
+---
+title: Notes & warnings
+---
 
 **Cupper** acknowledges that simple markdown is limiting when it comes to writing compelling documentation, so it provides a number of "shortcodes". Shortcodes offer a simple syntax for including rich content. For example, **Cupper** provides shortcodes for including notes and warnings.
 

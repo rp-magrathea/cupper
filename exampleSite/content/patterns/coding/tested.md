@@ -1,6 +1,6 @@
-+++
-title = "Tested using..."
-+++
+---
+title: Tested using...
+---
 
 When you're an inclusive designer, it's pertinent to do some testing. Following specs is one thing, but you need to verify that your component works okay for users.
 

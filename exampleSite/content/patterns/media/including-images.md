@@ -1,6 +1,6 @@
-+++
-title = "Including images"
-+++
+---
+title: Including images
+---
 
 From time to time, you'll be wanting to include images illustrating the documented pattern in hand. Images live in the static folder, which is a sibling of the `/content` folder you'll be mostly working in.
 

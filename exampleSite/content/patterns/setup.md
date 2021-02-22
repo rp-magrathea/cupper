@@ -1,7 +1,7 @@
-+++
-title = "Setup"
-weight = 2
-+++
+---
+title: Setup
+weight: 2
+---
 
 By now, you should have followed the {{% pattern "Installation" %}} instructions. You should have Hugo and Node installed, and a local copy of a forked version of **Cupper**. You should also have run `npm install` in the root of that codebase.
 

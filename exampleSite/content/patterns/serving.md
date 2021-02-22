@@ -1,7 +1,7 @@
-+++
-title = "Serving"
-weight = 3
-+++
+---
+title: Serving
+weight: 3
+---
 
 ## Serving locally
 

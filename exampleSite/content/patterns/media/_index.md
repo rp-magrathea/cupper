@@ -1,4 +1,4 @@
-+++
-title = "Media"
-weight = 2
-+++
+---
+title: Media
+weight: 2
+---

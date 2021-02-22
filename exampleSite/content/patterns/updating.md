@@ -1,7 +1,7 @@
-+++
-title = "Updating Cupper"
-weight = 5
-+++
+---
+title: Updating Cupper
+weight: 5
+---
 
 The core of **Cupper's** functionality is in its Hugo theme, also called **Cupper**. This is found in the theme folder.
 

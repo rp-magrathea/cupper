@@ -1,6 +1,6 @@
-+++
-title = "Snippets"
-+++
+---
+title: Snippets
+---
 
 A lot of the time, your larger documentation patterns will share some common techniques and utilities. For this reason, **Cupper** lets you save snippets of markdown in a **snippets** folder, alongside the main content folder.
 

@@ -1,6 +1,6 @@
-+++
-title = "Tables of contents"
-+++
+---
+title: Tables of contents
+---
 
 Pattern pages in **Cupper** that have two or more subheadings (`<h2>`s) automatically get a **table of contents**: a list of links to the main subsections for the page. This feature is made accessible as a navigation region with the "Table of contents" label and uses an ordered list. The table of contents markup for the {{% pattern "Setup" %}} page looks something like this:
 

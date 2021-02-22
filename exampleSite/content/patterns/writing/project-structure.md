@@ -1,7 +1,7 @@
-+++
-title = "Project structure"
-weight = 1
-+++
+---
+title: Project structure
+weight: 1
+---
 
 Before you can set about making documentation, you need to know where everything goes. The simplest folder structure looks like this:
 

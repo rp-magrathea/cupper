@@ -1,8 +1,10 @@
-+++
-title = "Markdown & metadata"
-weight = 3
-tags = ['metadata', 'markdown']
-+++
+---
+tags:
+- metadata
+- markdown
+title: Markdown & metadata
+weight: 3
+---
 
 In **Cupper** everything is documented using markdown, as a "pattern". To create a new pattern file, just add a file with the `.md` extension to the `content/patterns` folder. It's recommended you use "kebab case" to name the file (words separated by hyphens). For example, a pattern with the title "Menu button" should probably have the filename `menu-button`. Then you get a nice clean URL: `username.github.io/your-library/patterns/menu-button`.
 

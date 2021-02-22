@@ -1,7 +1,7 @@
-+++
-title = "Demo embedding"
-weight = 2
-+++
+---
+title: Demo embedding
+weight: 2
+---
 
 Sometimes just pictures of the pattern you're documenting aren't enough. Interactive patterns benefit from live demos, so that readers can test their functionality.
 

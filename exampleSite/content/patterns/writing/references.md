@@ -1,6 +1,6 @@
-+++
-title = "References"
-+++
+---
+title: References
+---
 
 ## Cross-references
 
