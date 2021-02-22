@@ -1,0 +1,10 @@
+languageCode = "en-US"
+title = "Not Entirely Unlike Cupper"
+baseURL = "https://magrathea.guide/not-entirely-unlike-cupper"
+canonifyURLs = true
+theme = "not-entirely-unlike-cupper"
+publishDir = "static/lego-library"
+
+[params]
+    description = "Documentation theme for Magrathea's various \"lego libraries.\" Based on [Cupper](https://github.com/ThePacielloGroup/cupper)."
+    codePenUser = "littlelark"
