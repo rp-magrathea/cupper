@@ -13,27 +13,31 @@ The `expandable` shortcode takes three parameters:
 
 Here's what the code might look like for a simple expandable section containing markdown:
 
-{{<codeBlock>}}
-&#x7b;{% expandable label="A section of dummy text" level="2" %}}
+{{< codeBlock >}}
+&#x7b;{< expandable label="A section of dummy text" level="2" >}}
 Here is some markdown including [a link](https://twitter.com/heydonworks). Donec erat est, feugiat a est sed, aliquet pharetra ipsum. Vivamus in arcu leo. Praesent feugiat, purus a molestie ultrices, libero massa iaculis ante, sit amet accumsan leo eros vel ligula.
-&#x7b;{% /expandable %}}
-{{</codeBlock>}}
+&#x7b;{< /expandable >}}
+{{< /codeBlock >}}
 
 Let's look at what that outputs:
 
-{{% expandable label="A section of dummy text" level="2" %}}
+{{< expandable label="A section of dummy text" level="2" >}}
 Here is some markdown including [a link](https://twitter.com/heydonworks). Donec erat est, feugiat a est sed, aliquet pharetra ipsum. Vivamus in arcu leo. Praesent feugiat, purus a molestie ultrices, libero massa iaculis ante, sit amet accumsan leo eros vel ligula.
-{{% /expandable %}}
+{{< /expandable >}}
 
 Successive collapsible sections fit snugly together. The second of the following two has `open="true"`.
 
-{{% expandable label="A section of dummy text" level="2" %}}
+{{< expandable label="A section of dummy text" level="2" >}}
 Mauris eget elit ut neque venenatis placerat id nec libero. Nunc accumsan cursus elit nec iaculis. Proin id rutrum magna, a aliquet sem. Sed et tortor id sem eleifend porta vitae eget elit. Cras sodales porta malesuada. Suspendisse at odio ac tortor.
-{{% /expandable %}}
+{{< /expandable >}}
 
-{{% expandable label="Another dummy section" level="2" open="true" %}}
+{{< expandable label="Another dummy section" level="2" open="true" >}}
 Ut vulputate enim ut lorem iaculis, vel faucibus metus iaculis. Aliquam erat volutpat. Aliquam luctus orci vel consectetur dignissim. Nullam et efficitur lorem, et ornare est. Sed tristique porttitor justo, quis malesuada velit. Nullam et elit finibus, sollicitudin velit placerat, ultricies dui.
-{{% /expandable %}}
+{{< /expandable >}}
+
+{{< warning >}}
+FIXME: The following is no longer true and needs to be updated.
+{{< /warning >}}
 
 Unfortunately, it is not currently possible to include shortcodes inside other shortcodes, using the "`%`" notation (which is designated for markdown content). If you use the angle brackets notation (illustrated below) it is possible, but markdown will no longer be permitted. You will have to code HTML inside such a section manually.
 
