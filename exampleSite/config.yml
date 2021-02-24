@@ -9,3 +9,8 @@ theme: not-entirely-unlike-cupper
 params:
     codePenUser: littlelark
     description: Documentation theme for Magrathea's various "lego libraries." Based on [Cupper](https://github.com/ThePacielloGroup/cupper).
+
+markup:
+    highlight:
+        codeFences: false
+        style: bw
