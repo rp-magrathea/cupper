@@ -13,11 +13,11 @@ First you need to install Hugo globally.
 
 If you are a Mac user and have [Homebrew](https://brew.sh/) on your system, installing Hugo is simple:
 
-{{<cmd>}}brew install hugo{{</cmd>}}
+{{< cmd >}}brew install hugo{{< /cmd >}}
 
 Alternatively, you can manually [install Hugo from a package](https://github.com/gohugoio/hugo/releases). You can verify the installation was successful by typing:
 
-{{<cmd>}}hugo version{{</cmd>}}
+{{< cmd >}}hugo version{{< /cmd >}}
 
 ### Windows users
 
@@ -33,22 +33,22 @@ It is likely you already have Node and NPM installed on your system. If so, you 
 
 **Cupper** is hosted on Github. To start using it, you'll need to get the files from there. If you are comfortable with the command line, just fork the [github.com/ThePacielloGroup/cupper](https://github.com/ThePacielloGroup/cupper) repository, then do a `git clone` to your local system. Replace `[your username]` in the following:
 
-{{<cmd>}}git clone https://github.com/[your username]/cupper.git{{</cmd>}}
+{{< cmd >}}git clone https://github.com/[your username]/cupper.git{{< /cmd >}}
 
 If the command line is not your thing, use Github's web interface to fork  [github.com/ThePacielloGroup/cupper](https://github.com/ThePacielloGroup/cupper) and choose **Open in Desktop** from **Clone or download** (see figure 1, below).
 
-{{% figure caption="The Github web interface" %}}
+{{< figure caption="The Github web interface" >}}
 ![The open in desktop option, revealed when clicking clone or download](/images/open_in_desktop.png)
-{{% /figure %}}
+{{< /figure >}}
 
-{{% note %}}
+{{< note >}}
 If you do not have a version of the Github desktop client installed, follow the prompts after clicking **Open in Desktop**.
-{{% /note %}}
+{{< /note >}}
 
-While you're in the Github interface, you might as well set up the publishing source for the live site. Choose the Master branch/docs option under **Settings → Github Pages → Source**. See {{% pattern "Serving" %}} for more details.
+While you're in the Github interface, you might as well set up the publishing source for the live site. Choose the Master branch/docs option under **Settings → Github Pages → Source**. See {{< pattern "Serving" >}} for more details.
 
 Once you have your local copy of the files, move to the root of that folder and in your terminal run an npm installation:
 
-{{<cmd>}}npm install{{</cmd>}}
+{{< cmd >}}npm install{{< /cmd >}}
 
-Now it's time to consult the {{% pattern "Setup" %}} pattern.
+Now it's time to consult the {{< pattern "Setup" >}} pattern.

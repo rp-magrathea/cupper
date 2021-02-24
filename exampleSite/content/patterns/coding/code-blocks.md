@@ -50,7 +50,7 @@ You mark out the highlighted areas using triple square brackets like so:
     &lt;button>Okay&lt;/button>
     &lt;button>Cancel&lt;/button>
 &lt;/div>
-&#x7b;{&lt;/code>}}
+&#x7b;{&lt; /code >}}
 {{< /codeBlock >}}
 
 Better still, if you include `numbered="true"`, each highlight is enumerated so you can reference it directly in the ensuing text. If you follow the shortcode directly with an ordered list, the styles match:

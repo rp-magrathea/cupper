@@ -7,13 +7,13 @@ weight: 3
 
 While you're creating content for your project, you'll probably want to see what the finished product looks like. Fortunately, **Cupper** is easy to serve locally using the `serve` command:
 
-{{<cmd>}}npm run serve{{</cmd>}}
+{{< cmd >}}npm run serve{{< /cmd >}}
 
 This will serve your working project from `localhost:1313`. Whenever you make changes to your files, the site will automatically rebuild. No need to refresh the web page!
 
 ## Publishing on Github Pages
 
-**Cupper** creates a `/docs` folder containing the latest version of your site whenever you do an `npm run build` or a `git commit`. So long as you forked the **Cupper** repository when making your own version (see {{% pattern "Setup" %}}), whenever you push to master, you will also be updating the site found at your Github Pages URL.
+**Cupper** creates a `/docs` folder containing the latest version of your site whenever you do an `npm run build` or a `git commit`. So long as you forked the **Cupper** repository when making your own version (see {{< pattern "Setup" >}}), whenever you push to master, you will also be updating the site found at your Github Pages URL.
 
 This URL will be in the following format:
 

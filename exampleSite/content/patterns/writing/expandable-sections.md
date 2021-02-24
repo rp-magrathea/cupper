@@ -41,12 +41,12 @@ FIXME: The following is no longer true and needs to be updated.
 
 Unfortunately, it is not currently possible to include shortcodes inside other shortcodes, using the "`%`" notation (which is designated for markdown content). If you use the angle brackets notation (illustrated below) it is possible, but markdown will no longer be permitted. You will have to code HTML inside such a section manually.
 
-{{<codeBlock>}}
-&#x7b;{&lt;expandable label="A section of dummy text" level="2">}}
+{{< codeBlock >}}
+&#x7b;{&lt; expandable label="A section of dummy text" level="2" >}}
 &lt;p>Here is a pattern reference shortcode: &#x7b;{% pattern "Writing inline demos" %}}.&lt;/p>
-&#x7b;{&lt;/expandable>}}
-{{</codeBlock>}}
+&#x7b;{&lt; /expandable >}}
+{{< /codeBlock >}}
 
-{{% note %}}
+{{< note >}}
 When you go to print a pattern from your library, some print styles take care of collapsible sections, making them appear expanded and like any other section.
-{{% /note %}}
+{{< /note >}}

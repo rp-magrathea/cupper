@@ -3,21 +3,21 @@ title: Setup
 weight: 2
 ---
 
-By now, you should have followed the {{% pattern "Installation" %}} instructions. You should have Hugo and Node installed, and a local copy of a forked version of **Cupper**. You should also have run `npm install` in the root of that codebase.
+By now, you should have followed the {{< pattern "Installation" >}} instructions. You should have Hugo and Node installed, and a local copy of a forked version of **Cupper**. You should also have run `npm install` in the root of that codebase.
 
 ## "Cleaning" the content folder
 
 Before you can start writing documentation, there are a few things still to do in order to get set up. At the moment, your version of **Cupper** is a facsimile of the original, containing all the content you're reading right now. We want to delete that content and replace it with some starter content. There's a simple `clean` command for this.
 
-{{% warning %}}
+{{< warning >}}
 If you are contributing to an existing **Cupper** library, do not run the following command. It will delete all of the patterns in that library. The `clean` command is just for libraries that you are starting from scratch.
-{{% /warning %}}
+{{< /warning >}}
 
-{{<cmd>}}
+{{< cmd >}}
   npm run clean
-{{</cmd>}}
+{{< /cmd >}}
 
-This will leave your `content` folder with just an `_index.md` file and a `patterns` folder containing a single demonstration pattern file. Individual content pages in **Cupper** are referred to as "patterns" — think pattern libraries). Find out more about these in {{% pattern "Project structure" %}}.
+This will leave your `content` folder with just an `_index.md` file and a `patterns` folder containing a single demonstration pattern file. Individual content pages in **Cupper** are referred to as "patterns" — think pattern libraries). Find out more about these in {{< pattern "Project structure" >}}.
 
 ## The config file
 
@@ -32,7 +32,7 @@ theme = "cupper"
 [params]
   description = "Documentation for the **Cupper** documentation builder. This documentation is constructed using the builder itself."
   codePenUser = "Heydon"
-{{</codeBlock>}}
+{{< /codeBlock >}}
 
 * **title** — This is the project's name, like "Megacorp 5000 Pattern Library" or "Assplosion.js Documentation". For **Cupper's** own version of **Cupper**, the `title` is simply _Cupper_ :-)
 * **baseURL** — This is the root of the live site. Typically you will publish the site to Github Pages, so this should be the base URL for your Github Pages site.
@@ -52,13 +52,13 @@ theme = "cupper"
   {...
 ```
 
-{{% figure caption="Cupper's Docs, with `short_name` displayed, available from the homescreen of a Samsung/Android phone." %}}
+{{< figure caption="Cupper's Docs, with `short_name` displayed, available from the homescreen of a Samsung/Android phone." >}}
 ![Teacup Cupper app icon with Cupper Docs written underneath](/images/samsung_homescreen.jpg)
-{{% /figure %}}
+{{< /figure >}}
 
-{{% note %}}
+{{< note >}}
 The `short_name` value refers to the text that appears under the icon on your homescreen. As the name suggests, it should be as short as possible to fit well (12 characters or fewer is ideal).
-{{% /note %}}
+{{< /note >}}
 
 ## Including a logo
 
@@ -70,4 +70,4 @@ In the `images/static` folder, you'll find a `logo.svg` file. Replace this file 
 </a>
 ```
 
-Now that your logo is in place, everything should be ready. Where next? You can learn about {{% pattern "Project structure" %}} to help you get writing, or find out how to serve the site locally and on Github Pages in {{% pattern "Serving" %}}.
+Now that your logo is in place, everything should be ready. Where next? You can learn about {{< pattern "Project structure" >}} to help you get writing, or find out how to serve the site locally and on Github Pages in {{< pattern "Serving" >}}.

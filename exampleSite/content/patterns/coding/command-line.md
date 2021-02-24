@@ -6,18 +6,18 @@ Your pattern documentation may need to include commands for installing packages 
 
 Here's how you write it:
 
-{{<codeBlock>}}
-&#x7b;{&lt;cmd>}}
+{{< codeBlock >}}
+&#x7b;{&lt; cmd >}}
 npm run start
-&#x7b;{&lt;/cmd>}}
-{{</codeBlock>}}
+&#x7b;{&lt; /cmd >}}
+{{< /codeBlock >}}
 
 And here's how it looks:
 
-{{<cmd>}}
+{{< cmd >}}
 npm run start
-{{</cmd>}}
+{{< /cmd >}}
 
-{{% warning %}}
+{{< warning >}}
 The `cmd` shortcode currently only supports single commands. If you want to show multiple, successive commands use separate `cmd` blocks.
-{{% /warning %}}
+{{< /warning >}}
