@@ -7,7 +7,7 @@ publishDir: static/lego-library
 theme: not-entirely-unlike-cupper
 
 params:
-    codePenUser: littlelark
+    codePenUser: veralidaine
     description: Documentation theme for Magrathea's various "lego libraries." Based on [Cupper](https://github.com/ThePacielloGroup/cupper).
 
 markup:
