@@ -1,0 +1,42 @@
+{
+    "author": "Daine (https://daine.dev)",
+    "bugs": "https://github.com/rp-magrathea/not-entirely-unlike-cupper/issues",
+    "description": "Magrathea port of Cupper pattern library theme for Hugo",
+    "devDependencies": {
+        "eslint": "^7.20.0",
+        "eslint-config-prettier": "^8.1.0",
+        "htmlhint": "^0.14.1",
+        "prettier": "^2.1.2",
+        "prettier-plugin-go-template": "^0.0.10",
+        "stylelint": "^13.10.0",
+        "stylelint-config-prettier": "^8.0.2",
+        "stylelint-config-standard": "^20.0.0",
+        "stylelint-no-unsupported-browser-features": "^4.1.4",
+        "stylelint-order": "^4.1.0"
+    },
+    "homepage": "https://github.com/rp-magrathea/not-entirely-unlike-cupper",
+    "keywords": [
+        "hugo",
+        "pattern-library",
+        "theme"
+    ],
+    "name": "@rp-magrathea/not-entirely-unlike-cupper",
+    "repository": "github:rp-magrathea/not-entirely-unlike-cupper",
+    "scripts": {
+        "lint": "( exit_code=0 ; npm run-script lint:css-error || exit_code=$? ; npm run-script lint:html || exit_code=$? ; npm run-script lint:js || exit_code=$? ; (( $exit_code == 0 )) )",
+        "lint:css": "npx stylelint --config tools/.stylelintrc.yml --ignore-path tools/.stylelintignore \"{src,dist}/**/*.{css,html,js}\" --allow-empty-input",
+        "lint:css-error": "npm run-script lint:css -- --quiet",
+        "lint:css-warning": "npm run-script lint:css",
+        "lint:html": "npx htmlhint --config tools/.htmlhintrc \"{src,dist}/**/*.{html,js}\"",
+        "lint:js": "npx eslint --config tools/.eslintrc.yml --no-error-on-unmatched-pattern \"dist/**/*.js\"",
+        "pre-commit": "npm run-script pre-commit:run",
+        "pre-commit:install": "pre-commit install",
+        "pre-commit:run": "pre-commit run --all-files",
+        "prettier:base": "npx prettier --config tools/.prettierrc.yml --ignore-path tools/.prettierignore",
+        "prettier:check": "npm run-script prettier:base -- --check .",
+        "prettier:write": "npm run-script prettier:base -- --write .",
+        "setup": "npm run-script pre-commit:install",
+        "target-browsers": "npx browserslist"
+    },
+    "version": "0.0.0"
+}
