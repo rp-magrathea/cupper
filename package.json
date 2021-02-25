@@ -29,13 +29,13 @@
         "lint:css-warning": "npm run-script lint:css",
         "lint:html": "npx htmlhint --config tools/.htmlhintrc \"{src,dist}/**/*.{html,js}\"",
         "lint:js": "npx eslint --config tools/.eslintrc.yml --no-error-on-unmatched-pattern \"dist/**/*.js\"",
+        "postinstall": "npm run-script pre-commit:install",
         "pre-commit": "npm run-script pre-commit:run",
         "pre-commit:install": "pre-commit install",
         "pre-commit:run": "pre-commit run --all-files",
         "prettier:base": "npx prettier --config tools/.prettierrc.yml --ignore-path tools/.prettierignore",
         "prettier:check": "npm run-script prettier:base -- --check .",
         "prettier:write": "npm run-script prettier:base -- --write .",
-        "setup": "npm run-script pre-commit:install",
         "target-browsers": "npx browserslist"
     },
     "version": "0.0.0"
