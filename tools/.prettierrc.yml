@@ -1,9 +1,0 @@
----
-overrides:
-    - files:
-        - "*.html"
-      options:
-        parser: go-template
-quoteProps: consistent
-semi: true
-tabWidth: 4
