@@ -1,0 +1,46 @@
+{{- $uniqueId := .Inner | htmlEscape | md5 | lower -}}
+
+<div class="demo-container">
+    {{ with .Get "caption" }}
+        <figure aria-labelledby="caption-{{ $uniqueId }}" role="group">
+    {{ end }}
+
+    <div class="demo-inner" {{ with .Get "style" }}style="{{ . | safeCSS }}"{{ end }}>
+        <inline-demo class="demo"></inline-demo>
+
+        <button data-launch="js-demo-{{ $uniqueId}}">
+            Launch <span aria-hidden="true">↗</span>
+        </button>
+    </div>
+
+    {{ with .Get "caption" }}
+            <figcaption id="caption-{{ $uniqueId }}">
+                {{ . | markdownify }}
+            </figcaption>
+        </figure>
+    {{ end }}
+</div>
+
+<template id="template-{{ $uniqueId }}">
+    {{ $stylesheet := resources.Get "stylesheet.css" | resources.PostCSS (dict "config" "tools") | resources.Fingerprint }}
+    <link href="{{ $stylesheet.RelPermalink }}" integrity="{{ $stylesheet.Data.Integrity }}" rel="stylesheet" />
+
+    {{ .Inner }}
+</template>
+
+<script>
+    (function() {
+        customElements.define("inline-demo",
+            class extends HTMLElement {
+                constructor() {
+                    super();
+                    let template = document.getElementById("template-{{ $uniqueId }}");
+                    let templateContent = template.content;
+
+                    const shadowRoot = this.attachShadow({ mode: "open" })
+                        .appendChild(templateContent.cloneNode(true));
+                }
+            }
+        );
+    })();
+</script>
