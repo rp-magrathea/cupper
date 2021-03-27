@@ -206,19 +206,6 @@ button {
     padding: 0.75rem;
     border: 0;
 }
-[data-launch] {
-  font-size: 0.66rem !important;
-  padding: 0.5rem !important;
-  margin-top: 0 !important;
-  border-radius: 0 !important;
-  border-top-left-radius: 0.33rem !important;
-  box-shadow: none !important;
-  background: #111 !important;
-  color: #fefefe !important;
-  position: absolute !important;
-  right: 0 !important;
-  bottom: 0 !important;
-}
 
 /* Forms */
 label {
@@ -759,7 +746,13 @@ h1 svg {
 .pattern-link {
     font-weight: bold;
 }
+
 /* inline demos */
+iframe.demo {
+  border: none;
+  width: 100%;
+}
+
 .demo-inner {
   border-top: 1px solid;
   border-bottom: 1px solid;
@@ -767,10 +760,19 @@ h1 svg {
   position: relative;
 }
 
-[id^="js-demo-"] {
-    all: initial;
-    display: block;
+a.demo-full-screen {
+  background: #111;
+  border-radius: 0;
+  border-top-left-radius: 0.33rem;
+  bottom: 0;
+  color: #fefefe;
+  display: block;
+  font-size: 0.66rem;
+  padding: 0.5rem;
+  position: absolute;
+  right: 0;
 }
+
 /* Section links */
 .h2-container {
     position: relative;
