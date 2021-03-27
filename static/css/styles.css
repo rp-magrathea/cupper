@@ -754,9 +754,19 @@ iframe.demo {
 }
 
 .demo-inner {
+  --button-font-size: 0.66rem;
+  --button-line-height: 1.5;
+  --button-padding: 0.5rem;
+  --padding-buffer: 0.5rem;
+  --padding-block: calc(
+      (var(--button-font-size) * var(--button-line-height)) +
+      (var(--button-padding) * 2) +
+      var(--padding-buffer)
+    );
+
   border-top: 1px solid;
   border-bottom: 1px solid;
-  padding: 1.5rem 0;
+  padding: var(--padding-block) 0;
   position: relative;
 }
 
@@ -767,8 +777,9 @@ a.demo-full-screen {
   bottom: 0;
   color: #fefefe;
   display: block;
-  font-size: 0.66rem;
-  padding: 0.5rem;
+  font-size: var(--button-font-size);
+  line-height: var(--button-line-height);
+  padding: var(--button-padding);
   position: absolute;
   right: 0;
 }
