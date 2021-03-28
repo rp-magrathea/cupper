@@ -36,6 +36,9 @@
     {{ if .IsHome }}
       <link rel="manifest" href="manifest.json">
     {{ end }}
+
+    <script defer src="{{ "js/prism.js" | absURL }}"></script>
+    <script defer src="{{ "js/dom-scripts.js" | absURL }}"></script>
   </head>
   <body>
     {{ if ne .Type "print-version" }}
@@ -128,7 +131,5 @@
         </div>
       </div>
     </div>
-    <script src="{{ "js/prism.js" | absURL }}"></script>
-    <script src="{{ "js/dom-scripts.js" | absURL }}"></script>
   </body>
 </html>

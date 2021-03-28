@@ -1,3 +1,19 @@
+/* adjust demo iframes' height to fit content */
+(function () {
+  let demoIframes = document.querySelectorAll("iframe.demo");
+
+  demoIframes.forEach(function(iframe) {
+      iframe.addEventListener("load", function() {
+          // scrollHeight = max(contentHeight, setHeight)
+          // if height isn't set, then it defaults to 150px
+          // so to get correct height for content shorter than 150px,
+          // you have to zero out the iframe height first
+          iframe.height = "0px";
+          iframe.height = iframe.contentDocument.body.scrollHeight + "px";
+      });
+  });
+}());
+
 /* expandable sections */
 (function () {
   function toggle (button, target) {
