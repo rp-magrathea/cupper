@@ -747,12 +747,7 @@ h1 svg {
     font-weight: bold;
 }
 
-/* inline demos */
-iframe.demo {
-  border: none;
-  width: 100%;
-}
-
+/* shared demo styles */
 .demo-inner {
   --button-font-size: 0.66rem;
   --button-line-height: 1.5;
@@ -770,6 +765,12 @@ iframe.demo {
   position: relative;
 }
 
+/* linked demos */
+iframe.demo {
+  border: none;
+  width: 100%;
+}
+
 a.demo-full-screen {
   background: #111;
   border-radius: 0;
@@ -782,6 +783,26 @@ a.demo-full-screen {
   padding: var(--button-padding);
   position: absolute;
   right: 0;
+}
+
+/* inline demos */
+[id^="js-demo-"] {
+  all: initial;
+  display: block;
+}
+
+[data-launch] {
+  background: #111 !important;
+  border-radius: 0 !important;
+  border-top-left-radius: 0.33rem !important;
+  box-shadow: none !important;
+  bottom: 0 !important;
+  color: #fefefe !important;
+  font-size: 0.66rem !important;
+  margin-top: 0 !important;
+  padding: 0.5rem !important;
+  position: absolute !important;
+  right: 0 !important;
 }
 
 /* Section links */
