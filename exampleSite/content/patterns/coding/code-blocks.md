@@ -5,15 +5,15 @@ weight: 1
 
 Markdown already supports code samples both inline (using single backticks like \`some code here\`) and in blocks. **Cupper** will syntax highlight HTML, CSS, and JavaScript if you provide the correct language in the formulation of the block.
 
-So, this&hellip;
+So, this…
 
-{{< codeBlock >}}
+{{< highlight markdown >}}
 ```html
-&lt;button aria-pressed="false">toggle me&lt;/button>
+<button aria-pressed="false">toggle me</button>
 ```
-{{< /codeBlock >}}
+{{< /highlight >}}
 
-&hellip; will result in this:
+…will result in this:
 
 ```html
 <button aria-pressed="false">toggle me</button>
@@ -27,35 +27,9 @@ To preserve the wrapping inside code blocks, horizontal scrolling is implemented
 
 ## Annotated code
 
-**Cupper** offers the ability to highlight and annotate specific parts of your code examples using the `code` shortcode. Take an accessible dialog. You may wish to point out key attributes that make that dialog support assistive technologies:
+**Cupper** offers the ability to highlight and annotate specific parts of your code examples using the `annotatedCode` shortcode. Take an accessible dialog. You may wish to point out key attributes that make that dialog support assistive technologies:
 
-{{< html >}}
-<div ((role="dialog")) ((aria-labelledby="dialog-heading"))>
-  <button ((aria-label="close"))>x</button>
-  <h2 ((id="dialog-heading"))>Confirmation</h2>
-  <p>Press <strong>Okay</strong> to confirm or <strong>Cancel</strong></p>
-  <button>Okay</button>
-  <button>Cancel</button>
-</div>
-{{< /html >}}
-
-You mark out the highlighted areas using triple square brackets like so:
-
-{{< codeBlock >}}
-&#x7b;{&lt; code >}}
-&lt;div [[[role="dialog"]]] [[[aria-labelledby="dialog-heading"]]]>
-    &lt;button [[[aria-label="close"]]]>x&lt;/button>
-    &lt;h2 [[[id="dialog-heading"]]]>Confirmation&lt;/h2>
-    &lt;p>Press <strong>Okay</strong> to confirm or <strong>Cancel</strong>&lt;/p>
-    &lt;button>Okay&lt;/button>
-    &lt;button>Cancel&lt;/button>
-&lt;/div>
-&#x7b;{&lt; /code >}}
-{{< /codeBlock >}}
-
-Better still, if you include `numbered="true"`, each highlight is enumerated so you can reference it directly in the ensuing text. If you follow the shortcode directly with an ordered list, the styles match:
-
-{{< code numbered="true" >}}
+{{< annotatedCode >}}
 <div [[[role="dialog"]]] [[[aria-labelledby="dialog-heading"]]]>
   <button [[[aria-label="close"]]]>x</button>
   <h2 [[[id="dialog-heading"]]]>Confirmation</h2>
@@ -63,7 +37,33 @@ Better still, if you include `numbered="true"`, each highlight is enumerated so 
   <button>Okay</button>
   <button>Cancel</button>
 </div>
-{{< /code >}}
+{{< /annotatedCode >}}
+
+You mark out the highlighted areas using triple square brackets like so:
+
+```html
+{{</* annotatedCode */>}}
+<div [[[role="dialog"]]] [[[aria-labelledby="dialog-heading"]]]>
+  <button [[[aria-label="close"]]]>x</button>
+  <h2 [[[id="dialog-heading"]]]>Confirmation</h2>
+  <p>Press <strong>Okay</strong> to confirm or <strong>Cancel</strong></p>
+  <button>Okay</button>
+  <button>Cancel</button>
+</div>
+{{</* /annotatedCode */>}}
+```
+
+Better still, if you include `numbered="true"`, each highlight is enumerated so you can reference it directly in the ensuing text. If you follow the shortcode directly with an ordered list, the styles match:
+
+{{< annotatedCode numbered="true" >}}
+<div [[[role="dialog"]]] [[[aria-labelledby="dialog-heading"]]]>
+  <button [[[aria-label="close"]]]>x</button>
+  <h2 [[[id="dialog-heading"]]]>Confirmation</h2>
+  <p>Press <strong>Okay</strong> to confirm or <strong>Cancel</strong></p>
+  <button>Okay</button>
+  <button>Cancel</button>
+</div>
+{{< /annotatedCode >}}
 
 1. The dialog is only announced as a dialog if it takes the `dialog` ARIA role
 2. The `aria-labelledby` relationship attribute makes the element carrying the `id` it points to its label
@@ -72,26 +72,26 @@ Better still, if you include `numbered="true"`, each highlight is enumerated so 
 
 You just include `numbered="true"` on the opening shortcode tag:
 
-{{< codeBlock >}}
-&#x7b;{&lt; code numbered="true" >}}
-&lt;div [[[role="dialog"]]] [[[aria-labelledby="dialog-heading"]]]>
-    &lt;button [[[aria-label="close"]]]>x&lt;/button>
-    &lt;h2 [[[id="dialog-heading"]]]>Confirmation&lt;/h2>
-    &lt;p>Press <strong>Okay</strong> to confirm or <strong>Cancel</strong>&lt;/p>
-    &lt;button>Okay&lt;/button>
-    &lt;button>Cancel&lt;/button>
-&lt;/div>
-&#x7b;{&lt; /code >}}
+```html
+{{</* annotatedCode numbered="true" */>}}
+<div [[[role="dialog"]]] [[[aria-labelledby="dialog-heading"]]]>
+  <button [[[aria-label="close"]]]>x</button>
+  <h2 [[[id="dialog-heading"]]]>Confirmation</h2>
+  <p>Press <strong>Okay</strong> to confirm or <strong>Cancel</strong></p>
+  <button>Okay</button>
+  <button>Cancel</button>
+</div>
+{{</* /annotatedCode */>}}
 
 1. The dialog is only announced as a dialog if it takes the `dialog` ARIA role
 2. The `aria-labelledby` relationship attribute makes the element carrying the `id` it points to its label
 3. The close button uses `aria-label` to provide the text label "close", overriding the text content
 4. The heading is used as the dialog's label. The `aria-labelledby` attribute points to its `id`
-{{< /codeBlock >}}
+```
 
 ### JavaScript example
 
-{{< code numbered="true" >}}
+{{< annotatedCode numbered="true" >}}
 /* Enable scrolling by keyboard of code samples */
 (function () {
     var codeBlocks = document.querySelectorAll('pre, .code-annotated');
@@ -106,7 +106,7 @@ You just include `numbered="true"` on the opening shortcode tag:
         }
     });
 }());
-{{< /code >}}
+{{< /annotatedCode >}}
 
 1. The `region` role announces the block as a region
 2. The `aria-label` describes the kind of content to be expected in the region

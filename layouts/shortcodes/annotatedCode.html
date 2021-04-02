@@ -1,0 +1,9 @@
+{{ $code := .Inner | htmlEscape }}
+{{ $code := replace $code "[[[" "<span class='annotation'>" }}
+{{ $code := replace $code "]]]" "</span>" }}
+{{ $isNumbered := default false (eq "true" (.Get "numbered")) }}
+
+{{ $code = $code | safeHTML }}
+
+<pre class="code-annotated{{- if $isNumbered }} numbered{{ end -}}"
+><code>{{ $code }}</code></pre>
