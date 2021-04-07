@@ -97,19 +97,16 @@
 }());
 
 /* Enable scrolling by keyboard of code samples */
-(function () {
-  var codeBlocks = document.querySelectorAll('pre, .code-annotated');
-
-  Array.prototype.forEach.call(codeBlocks, function (block) {
-    if (block.querySelector('code')) {
-      block.setAttribute('role', 'region');
-      block.setAttribute('aria-label', 'code sample');
-      if (block.scrollWidth > block.clientWidth) {
-        block.setAttribute('tabindex', '0');
-      }
-    }
-  });
-}());
+/*
+  The script that used to be here would add tabindex="0" if overflow-x: auto
+  kicked in and the element needed to scroll. This doesn't seem to be needed
+  anymore; the associated bug in Chromium has been closed,
+  there's an update in Adrian Roselli's blog post about this
+  (https://adrianroselli.com/2016/02/keyboard-and-overflow.html),
+  I've personally tested with VoiceOver+Firefox,
+  and <pre><code> blocks on newer websites of various accessibility-focused
+  folks (including Heydon Pickering), leave these elements bare.
+*/
 
 /* Switch and persist theme */
 (function () {
