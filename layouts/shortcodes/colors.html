@@ -1,11 +1,16 @@
-{{ $colorString := replace (.Get 0) " " "" | upper }}
-{{ $colors := split $colorString "," }}
-<div class="colors-container">
-  <ul class="colors">
-    {{ range $colors }}
-      <li style="background-color: {{ . }};{{ if or (eq . "#FFFFFF") (eq . "#FFF")}} border: 1px solid #111{{ end }}">
-        <span>{{ . }}</span>
-      </li>
-    {{ end }}
-  </ul>
-</div>
+{{ $colors := .Params }}
+{{ $borderedColors := slice "#fff" "#ffffff" }}
+
+<ul class="color-palette" role="list">
+  {{ range $color := $colors }}
+    {{ $color = $color | chomp | lower }}
+    <li
+      style="
+        background-color: {{ $color }};
+        {{ if in $borderedColors $color }} border: 1px solid #111;{{ end }}
+      "
+    >
+      <code>{{ $color }}</code>
+    </li>
+  {{ end }}
+</ul>

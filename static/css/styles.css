@@ -161,6 +161,10 @@ code {
 }
 /* Lists */
 
+ul[role="list"] {
+    list-style: none;
+}
+
 main ul,
 main ol {
     margin-left: 2.25rem;
@@ -720,27 +724,28 @@ h1 svg {
     font-style: normal;
 }
 /* Color palettes */
-.colors {
+.color-palette {
+    display: grid;
+    grid-gap: 0.5rem;
+    grid-template-columns: repeat(auto-fit, minmax(5rem, 1fr));
+    margin-left: 0;
+}
+
+.color-palette li {
+    align-items: flex-end;
     display: flex;
-    height: 5rem;
-    margin: -0.25rem;
-    list-style: none;
-    flex-wrap: nowrap;
+    justify-content: flex-end;
+    margin: 0;
+    min-height: 5rem;
+    padding: 0.25rem;
 }
-.colors li {
-    margin: 0.25rem;
-    flex: 1 0 auto;
-    position: relative;
-}
-.colors span {
+
+.color-palette code {
     line-height: 1;
     background-color: #111;
     color: #fefefe;
     font-size: 0.75rem;
     padding: 0.25rem;
-    position: absolute;
-    bottom: 0.25rem;
-    right: 0.25rem;
 }
 /* cross references */
 .pattern-link {
