@@ -1,4 +1,4 @@
-{{ $code := .Inner | htmlEscape }}
+{{ $code := (trim .Inner "\n") | htmlEscape }}
 {{ $code := replace $code "[[[" "<span class='annotation'>" }}
 {{ $code := replace $code "]]]" "</span>" }}
 {{ $isNumbered := default false (eq "true" (.Get "numbered")) }}
