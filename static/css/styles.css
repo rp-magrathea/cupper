@@ -140,7 +140,6 @@ kbd {
 /* Code blocks */
 .highlight pre {
     filter: grayscale(100%);
-    padding: 1em;
 }
 
 pre,
