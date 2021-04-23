@@ -37,7 +37,7 @@ You may have noticed that this site's navigation is divided partly into subsecti
 
 Subfolders like `/popups` must each have an `_index.md` file. This file doesn't need any content except the TOML metadata defining the title (name) of that subsection:
 
-```
+```yaml
 ---
 title: Popup windows
 ---

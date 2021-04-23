@@ -6,8 +6,8 @@ Representing folder/file structures is simple and accessible in **Cupper**. Whic
 
 The file tree is described using a markdown nested list structure:
 
-{{< codeBlock >}}
-&#x7b;{< fileTree >}}
+```go-html-template
+{{</* fileTree */>}}
 * Level 1 folder
     * Level 2 file
     * Level 2 folder
@@ -24,8 +24,8 @@ The file tree is described using a markdown nested list structure:
         * Level 3 file
     * Level 2 file
 * Level 1 file
-&#x7b;{< /fileTree >}}
-{{< /codeBlock >}}
+{{</* /fileTree */>}}
+```
 
 This is drawn in the following fashion, but preserves the underlying nested list structure for assistive technologies such as screen readers:
 

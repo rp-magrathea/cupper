@@ -6,9 +6,9 @@ When you're an inclusive designer, it's pertinent to do some testing. Following 
 
 **Cupper** provided a `tested` shortcode that lets you show which browsers and assistive technologies you've tried your design out in. Here's an example. Note the commas and "+" signs.
 
-{{< codeBlock >}}
-&#x7b;{< tested using="Firefox + JAWS, Chrome, Safari iOS + Voiceover, Edge" >}}
-{{< /codeBlock >}}
+```go-html-template
+{{</* tested using="Firefox + JAWS, Chrome, Safari iOS + Voiceover, Edge" */>}}
+```
 
 This outputs:
 

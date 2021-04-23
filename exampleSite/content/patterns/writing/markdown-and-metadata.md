@@ -14,7 +14,7 @@ If you're not familiar with writing markdown, there are a number of tutorials av
 
 Like many static site generators, Hugo lets you add metadata to its markdown files. Hugo's brand of metadata is called YAML (although TOML is also accepted). The only thing you _have_ to put in the YAML is a `title` — like this:
 
-```
+```yaml
 ---
 title: Menu button
 ---
@@ -28,7 +28,7 @@ The title automatically becomes the page's main `<h1>` heading. The highest head
 
 If you like, you can also tag the pattern so that it turns up in lists of similar content. You add tags in an array format. Note that all the YAML data is found at the top of the markdown file, between the `---` lines.
 
-```
+```yaml
 ---
 title: Menu button
 tags:
@@ -44,7 +44,7 @@ This will create links to pages listing content tagged with the same terms using
 
 By default, patterns are listed alphabetically in the navigation. However, sometimes you might like to change the order around. This is possible by adding a `weight` parameter. To make my menu button pattern appear at the top of its subsection, I would give it a `weight` of `1`:
 
-```
+```yaml
 ---
 title: Menu button
 tags:

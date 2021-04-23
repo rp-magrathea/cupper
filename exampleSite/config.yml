@@ -12,5 +12,4 @@ params:
 
 markup:
     highlight:
-        codeFences: false
         style: bw

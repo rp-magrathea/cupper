@@ -23,7 +23,7 @@ This will leave your `content` folder with just an `_index.md` file and a `patte
 
 You'll also want to name your project and configure one or two other things in the `config.toml` file that's found at the root of your project. Here's how that file looks:
 
-{{<codeBlock lang="html" numbered="true">}}
+```toml
 languageCode = "en-us"
 title = "Cupper"
 baseURL = "https://thepaciellogroup.github.io/cupper/"
@@ -32,7 +32,7 @@ theme = "cupper"
 [params]
   description = "Documentation for the **Cupper** documentation builder. This documentation is constructed using the builder itself."
   codePenUser = "Heydon"
-{{< /codeBlock >}}
+```
 
 * **title** — This is the project's name, like "Megacorp 5000 Pattern Library" or "Assplosion.js Documentation". For **Cupper's** own version of **Cupper**, the `title` is simply _Cupper_ :-)
 * **baseURL** — This is the root of the live site. Typically you will publish the site to Github Pages, so this should be the base URL for your Github Pages site.
@@ -44,7 +44,7 @@ theme = "cupper"
 
 **Cupper** projects work as progressive web applications, meaning users can save them to their home screen and read them offline. The web app manifest, found at the root of the `static` folder, defines names and icons for the app. You'll probably want to open `/static/manifest.json` and personalize the `name` and `short_name` values.
 
-```
+```json
 {
  "name": "Cupper Documentation Builder",
  "short_name": "Cupper Docs",

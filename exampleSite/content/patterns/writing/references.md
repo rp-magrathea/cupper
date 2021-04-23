@@ -6,9 +6,9 @@ title: References
 
 **Cupper** identifies the main content files in your documentation as _patterns_, and they're kept in the **content/patterns** folder. It's easy to cross-reference patterns using the `pattern` shortcode. For example, I can reference the {{< pattern "Notes & warnings" >}} pattern. Here's what the markdown looks like, including the shortcode:
 
-{{< codeBlock >}}
-I can reference the &#x7b;{< pattern "Notes & warnings" >}} pattern here.
-{{< /codeBlock >}}
+```go-html-template
+I can reference the {{</* pattern "Notes & warnings" */>}} pattern here.
+```
 
 This saves you having to worry about pathing and decorates the generated link with a bookmark icon, identifying the link as a pattern reference visually.
 
@@ -22,9 +22,9 @@ The title argument you supply to the shortcode must be exactly the same as the r
 
 Instead of having to copy and paste content and links to WCAG, **Cupper** provides a shortcode mechanism that lets you simply list the success criteria by number:
 
-{{< codeBlock >}}
-&#x7b;{< wcag include="1.2.1, 1.3.1, 4.1.2" >}}
-{{< /codeBlock >}}
+```go-html-template
+{{</* wcag include="1.2.1, 1.3.1, 4.1.2" */>}}
+```
 
 This generates a list of references that includes the names of each criterion and links to them directly. Like this:
 
@@ -38,9 +38,9 @@ You don't have to leave spaces after the comma separators. They are optional.
 
 Sometimes, you'll want to include the full descriptions of the success criteria inline. This is possible by setting `descriptions` to `true`:
 
-{{< codeBlock >}}
-&#x7b;{< wcag include="1.3.1, 4.1.2" descriptions="true" >}}
-{{< /codeBlock >}}
+```go-html-template
+{{</* wcag include="1.3.1, 4.1.2" descriptions="true" */>}}
+```
 
 Here's the more verbose output:
 
@@ -54,9 +54,9 @@ Both omitting the `descriptions` attribute and including it with a "false" value
 
 Some inclusive design concepts are not reducible to success or fail criteria. This is why The Paciello Group wrote the [Inclusive Design Principles](http://inclusivedesignprinciples.org/). These can be listed by name.
 
-{{< codeBlock >}}
-&#x7b;{< principles include="Add value, Be consistent" descriptions="true" >}}
-{{< /codeBlock >}}
+```go-html-template
+{{</* principles include="Add value, Be consistent" descriptions="true" */>}}
+```
 
 Here's the output with `descriptions="true"`:
 

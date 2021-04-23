@@ -26,7 +26,7 @@ Pattern pages in **Cupper** that have two or more subheadings (`<h2>`s) automati
 
 Tables of content are a neat way to break down the content of the page and give users a navigable overview. However, they may not be to your taste. Never fear, you can turn tables of content off by adding `toc = false` to the YAML front matter for your pattern:
 
-```
+```yaml
 ---
 title: My page with a few headings
 toc: false

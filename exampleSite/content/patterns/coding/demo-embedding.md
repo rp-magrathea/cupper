@@ -9,9 +9,9 @@ Sometimes just pictures of the pattern you're documenting aren't enough. Interac
 
 **Cupper** offers a couple of ways to do this. The first is by embedding CodePen demos into the content. The `codePen` shortcode takes just one argument: the codePen's `ID`.
 
-{{< codeBlock >}}
-&#x7b;{< codePen VpVNKW >}}
-{{< /codeBlock >}}
+```go-html-template
+{{</* codePen VpVNKW */>}}
+```
 
 This will embed the identified codePen into the content wherever you placed the shortcode, with the result view showing by default:
 
@@ -25,15 +25,15 @@ The compiled site will output an error if your `config.toml` does not include yo
 
 You can embed JS Bins just like CodePens, supplying a single `id` parameter.
 
-{{< codeBlock >}}
-&#x7b;{< jsBin juwowaq >}}
-{{< /codeBlock >}}
+```go-html-template
+{{</* jsBin juwowaq */>}}
+```
 
 However, you can also have finer control over which panes are displayed. Use two parameters: one for the `id` and another, `show`,  listing the panes you want to include.
 
-{{< codeBlock >}}
-&#x7b;{< jsBin id="juwowaq" show="css,output" >}}
-{{< /codeBlock >}}
+```go-html-template
+{{</* jsBin id="juwowaq" show="css,output" */>}}
+```
 
 The options for the `show` parameter are:
 
@@ -46,7 +46,6 @@ The options for the `show` parameter are:
 (Note that, under some circumstances, the `html` pane is added whether you select it or not.)
 
 {{< jsBin id="juwowaq" show="css,output" >}}
-
 
 ## Inline demos
 

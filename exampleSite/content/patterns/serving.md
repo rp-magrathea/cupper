@@ -23,7 +23,7 @@ This URL will be in the following format:
 
 You'll also need to add this value to your `config.toml` file as the `baseURL`. For **Cupper**'s own documentation it looks like the following. Just overwrite it.
 
-```
+```toml
 baseURL = "https://thepaciellogroup.github.io/cupper/"
 ```
 

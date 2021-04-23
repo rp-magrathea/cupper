@@ -9,10 +9,10 @@ There are some issues with {{< pattern "Demo embedding" >}}, like the embeds not
 
 Here's the example code for an inline demo of a toggle button:
 
-{{< codeBlock lang="html" >}}
-&#x7b;{&lt; demo >}}
-&lt;button aria-pressed="false">Toggle Me&lt;/button>
-&lt;style>
+```go-html-template
+{{</* demo */>}}
+<button aria-pressed="false">Toggle Me</button>
+<style>
 button {
     background: DarkCyan;
     color: white;
@@ -28,17 +28,17 @@ button {
     border-top: 5px solid #000;
     border-left: 5px solid #000;
 }
-&lt;/style>
-&lt;script>
+</style>
+<script>
 var toggle = demo.querySelector('[aria-pressed]');
 
 toggle.addEventListener('click', (e) => {
     let pressed = e.target.getAttribute('aria-pressed') === 'true';
     e.target.setAttribute('aria-pressed', !pressed);
 });
-&lt;/script>
-&#x7b;{&lt; /demo >}}
-{{< /codeBlock >}}
+</script>
+{{</* /demo */>}}
+```
 
 Note the `demo.querySelector` on line `21`. **Cupper** automatically provides `demo`, representing the root node of the demo. It's like the `document` keyword but for a demo's subtree.
 
@@ -78,11 +78,11 @@ toggle.addEventListener('click', function () {
 
 Sometimes your component will be expected to appear in a context where the parent element has a background color and possibly other styles. You can add style to your demo block's container element using the `style` attribute. It works just like standard inline styling.
 
-{{< codeBlock lang="html" >}}
-&#x7b;{&lt; demo style="background-color: pink; padding: 1rem;" >}}
-&lt;!-- demo code here -->
-&#x7b;{&lt; /demo >}}
-{{< /codeBlock >}}
+```go-html-template
+{{</* demo style="background-color: pink; padding: 1rem;" */>}}
+<!-- demo code here -->
+{{</* /demo */>}}
+```
 
 ## "Launch"
 
@@ -99,10 +99,10 @@ The "Launch" button is positioned over the styleable demo container. Bear this i
 
 It's possible to give your demo a caption using an accessible `<figure>` and `<figcaption>` structure. All _you_ need to do is supply a `caption` attribute. For example:
 
-{{< codeBlock lang="html" >}}
-&#x7b;{&lt; demo caption="A basic button element" >}}
-&lt;!-- demo code here -->
-&#x7b;{&lt; /demo >}}
-{{< /codeBlock >}}
+```go-html-template
+{{</* demo caption="A basic button element" */>}}
+<!-- demo code here -->
+{{</* /demo */>}}
+```
 
 Along with the standard `figure` shortcodes (described in {{< pattern "Including images" >}}), demo figures are numbered automatically according to their order in the page. You can use markdown syntax in the caption text value.

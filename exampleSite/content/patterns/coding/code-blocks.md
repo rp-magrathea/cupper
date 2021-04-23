@@ -41,7 +41,7 @@ To preserve the wrapping inside code blocks, horizontal scrolling is implemented
 
 You mark out the highlighted areas using triple square brackets like so:
 
-```html
+```go-html-template
 {{</* annotatedCode */>}}
 <div [[[role="dialog"]]] [[[aria-labelledby="dialog-heading"]]]>
   <button [[[aria-label="close"]]]>x</button>
@@ -72,7 +72,7 @@ Better still, if you include `numbered="true"`, each highlight is enumerated so 
 
 You just include `numbered="true"` on the opening shortcode tag:
 
-```html
+```go-html-template
 {{</* annotatedCode numbered="true" */>}}
 <div [[[role="dialog"]]] [[[aria-labelledby="dialog-heading"]]]>
   <button [[[aria-label="close"]]]>x</button>
@@ -112,5 +112,5 @@ You just include `numbered="true"` on the opening shortcode tag:
 2. The `aria-label` describes the kind of content to be expected in the region
 
 {{< note >}}
-As you may have noticed, using specified highlights with the `code` shortcode sacrifices syntax highlighting. If you want syntax highlighting you must use the markdown triple back-tick syntax and annotation is not available.
+As you may have noticed, using annotations sacrifices syntax highlighting. If you want syntax highlighting you must use the markdown triple back-tick syntax and annotation is not available.
 {{< /note >}}

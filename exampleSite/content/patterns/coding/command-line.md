@@ -6,11 +6,11 @@ Your pattern documentation may need to include commands for installing packages 
 
 Here's how you write it:
 
-{{< codeBlock >}}
-&#x7b;{&lt; cmd >}}
+```go-html-template
+{{</* cmd */>}}
 npm run start
-&#x7b;{&lt; /cmd >}}
-{{< /codeBlock >}}
+{{</* /cmd */>}}
+```
 
 And here's how it looks:
 
