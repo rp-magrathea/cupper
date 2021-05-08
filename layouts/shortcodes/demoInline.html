@@ -1,0 +1,53 @@
+{{- $uniqueId := .Inner | htmlEscape | md5 | lower -}}
+
+<div class="demo-container">
+    {{ with .Get "caption" }}
+        <figure aria-labelledby="caption-{{ $uniqueId }}" role="figure">
+    {{ end }}
+
+    <div class="demo-inner" {{ with .Get "style" }}style="{{ . | safeCSS }}"{{ end }}>
+        <demo-inline class="demo" id="js-demo-{{ $uniqueId }}"></demo-inline>
+
+        <button data-launch="js-demo-{{ $uniqueId}}">
+            Launch <span aria-hidden="true">↗</span>
+        </button>
+    </div>
+
+    {{ with .Get "caption" }}
+            <figcaption id="caption-{{ $uniqueId }}">
+                {{ . | markdownify }}
+            </figcaption>
+        </figure>
+    {{ end }}
+</div>
+
+<template id="template-{{ $uniqueId }}">
+    {{ .Inner }}
+</template>
+
+<script>
+    (function() {
+        customElements.define("demo-inline",
+            class extends HTMLElement {
+                constructor() {
+                    super();
+                    const template = document.getElementById("template-{{ $uniqueId }}");
+                    const templateContent = template.content;
+
+                    let scripts = templateContent.querySelectorAll("script");
+
+                    for (let script of scripts) {
+                        let wrapper = `(function() {
+                            const demo = document.getElementById("js-demo-{{ $uniqueId }}").shadowRoot;
+                            ${ script.textContent }
+                        })();`;
+                        script.textContent = wrapper;
+                    }
+
+                    const shadowRoot = this.attachShadow({ mode: "open" })
+                        .appendChild(templateContent.cloneNode(true));
+                }
+            }
+        );
+    })();
+</script>
